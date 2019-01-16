@@ -35,7 +35,7 @@ $(document).ready(function () {
 		$(this).append(`<div class="columnFilter" colindex="${this.cellIndex}"></div>`);
 	});
 	//Attach click-handlers to filter icons
-	$('.filter')
+	$('.columnFilter')
 	.on('click', function (e) {
 		//Prevent default behaviour of clicking onto parent element (column sorting)
 		e.stopPropagation();
