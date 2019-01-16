@@ -32,7 +32,7 @@ $(document).ready(function () {
 		});
 	//Append filter div to each column header along with corresponding column index
 	$.each(dataTable.columns($('#mytable th')).header(), function () {
-		$(this).append(`<div class="filter" colindex="${this.cellIndex}"></div>`);
+		$(this).append(`<div class="columnFilter" colindex="${this.cellIndex}"></div>`);
 	});
 	//Attach click-handlers to filter icons
 	$('.filter')
