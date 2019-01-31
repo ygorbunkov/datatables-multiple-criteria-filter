@@ -1,6 +1,6 @@
 Multiple criteria filter for jQuery plug-in DataTables employs 'multiple-criteria-multiple-column' inclusive OR logic using DataTables API.
 
-Filter itself implemented as a DataTables feature plug-in, so in order to use that, you must specify 'F' among your DataTable dom/sDom options:
+Filter itself implemented as a DataTables feature plug-in, so in order to use that, you must specify 'F' among your DataTable 'dom'/'sDom' options:
 	
 	var dataTable = $('#mytable').DataTable({
 			sDom: 'tF'
