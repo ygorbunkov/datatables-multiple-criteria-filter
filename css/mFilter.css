@@ -1,0 +1,169 @@
+.columnFilter {
+	background: url("../img/filterInactive.svg") no-repeat center center;
+	background-size: 15px;
+	width: 30px;
+	height: 20px;
+	float: left;
+}
+
+.columnFilter[status="active"] {
+	background: url("../img/filterActive.svg") no-repeat center center;
+	background-size: 15px;
+}
+
+#filterMenu {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	float: right;
+	box-shadow: 3px 3px 10px #5a5a5a;
+	background: white;
+	width: 220px;
+	padding: 5px;
+	border-radius: 5px;
+	color: #5a5a5a;
+}
+
+#filterMenu .searchRow {
+	width: inherent;
+	height: 20px;
+	display: block;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+#filterMenu .searchRow input {
+	max-width: 150px;
+	float: left;
+	vertical-align: middle;
+	border: 1px solid #5a5a5a;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+#filterMenu .searchRow .tinyButton {
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	display: block;
+	float: right;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#filterMenu .scrollButton {
+	height: 8px;
+	width: 100%;
+	display: none;
+	cursor: pointer;
+}
+
+#filterMenu #scrollUp {
+	background: url("../img/scrollUp.svg") no-repeat center center;
+	background-size: 8px;
+}
+
+#filterMenu #scrollDown {
+	background: url("../img/scrollDown.svg") no-repeat center center;
+	background-size: 8px;
+}
+
+#filterMenu div[action="applyFilter"][status="inactive"] {
+	background: url("../img/filterApplyInactive.svg") no-repeat center center;
+	background-size: 15px;	
+}
+
+#filterMenu div[action="applyFilter"][status="active"] {
+	background: url("../img/filterApplyActive.svg") no-repeat center center;
+	background-size: 15px;	
+}
+
+#filterMenu [action="clearFilter"][status="inactive"] {
+	background: url("../img/filterClearInactive.svg") no-repeat center center;
+	background-size: 15px;	
+}
+
+#filterMenu [action="clearFilter"][status="active"] {
+	background: url("../img/filterClearActive.svg") no-repeat center center;
+	background-size: 15px;	
+}
+
+#filterMenu #criteriaList {
+	overflow-y: scroll;
+	max-height: 250px;
+	margin: 5px;
+}
+
+#filterMenu .filterRow {
+	display: block;
+	margin: 5px;
+	width: inherit;
+	height: 20px;
+}
+
+#filterMenu .filterRow .categoryLabel {
+	vertical-align: middle;
+	float: left;
+}
+
+#filterMenu .filterRow:hover .categoryLabel {
+	font-weight: bold;
+}
+
+#filterMenu #criteriaList::-webkit-scrollbar { 
+    display: none; 
+}
+
+#filterMenu .filterRow [type="checkbox"] {
+	vertical-align: middle;
+	float: right;
+	width: 12px;
+	height: 12px;
+}
+
+#filterMenu .filterRow [status="checked"] {
+	background: url("../img/checkboxChecked.svg") no-repeat center center;
+	background-size: 12px;
+}
+
+#filterMenu .filterRow:hover [status="checked"] {
+	background: url("../img/checkboxCheckedHover.svg") no-repeat center center;
+	background-size: 12px;
+}
+
+#filterMenu .filterRow [status="semichecked"] {
+	background: url("../img/checkboxSemichecked.svg") no-repeat center center;
+	background-size: 12px;
+}
+
+#filterMenu .filterRow [status="unchecked"] {
+	background: url("../img/checkboxUnchecked.svg") no-repeat center center;
+	background-size: 12px;
+}
+
+#filterMenu #submitButtons {
+	align: right;
+	margin: 5px;
+	text-align: right;
+}
+
+#filterMenu .submitButton {
+	border: 1px solid #5a5a5a;
+	background: white;
+	box-shadow: none;
+	border-radius: 5px;
+}
+
+#filterMenu .submitButton:hover {
+	background: #5a5a5a;
+	color: white;
+}
+
+.noSelectionHighlight{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+}
