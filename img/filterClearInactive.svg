@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38.054mm" height="40.982mm" version="1.1" viewBox="0 0 38.053898 40.982162" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<defs>
+<clipPath id="a">
+<path d="m0 0h145.67v156.33h-145.67z"/>
+</clipPath>
+</defs>
+<g transform="translate(-22.431 -143.32)">
+<g transform="matrix(.26458 0 0 .26458 10.553 148.58)">
+<path d="m44.895-19.898h132.54v24.962l-47.542 47.204v82.727l-37.617-37.443v-45.284l-47.382-47.204z" fill="#a7a7a7" fill-rule="evenodd"/>
+<path d="m130.05 16.425 19.209 19.202 19.049-19.202 18.889 18.882-19.049 19.042 19.049 19.202-18.889 18.882-19.049-19.202-19.209 19.202-18.889-18.882 19.209-19.202-19.209-19.042z" fill="#c00000" fill-rule="evenodd"/>
+<path transform="translate(44.414 -20.538)" d="m85.639 36.963 19.209 19.202 19.049-19.202 18.889 18.882-19.049 19.042 19.049 19.202-18.889 18.882-19.049-19.202-19.209 19.202-18.889-18.882 19.209-19.202-19.209-19.042z" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0414px"/>
+</g>
+</g>
+</svg>

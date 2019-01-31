@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37.52mm" height="40.982mm" version="1.1" viewBox="0 0 37.519764 40.982162" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<defs>
+<clipPath id="a">
+<path d="m0 0h143.17v156.33h-143.17z"/>
+</clipPath>
+</defs>
+<g transform="translate(-10.722 -148.75)">
+<g transform="matrix(.26458 0 0 .26458 10.553 148.58)">
+<path d="m0.63985 0.64005h132.29v24.962l-47.349 47.204v82.727l-37.591-37.443v-45.284l-47.349-47.204z" fill="#a7a7a7" fill-rule="evenodd"/>
+<path d="m60.146 71.846h27.034v-27.042h26.714v27.042h27.034v26.722h-27.034v27.042h-26.714v-27.042h-27.034z" fill="#00b050" fill-rule="evenodd"/>
+<path d="m60.146 71.846h27.034v-27.042h26.714v27.042h27.034v26.722h-27.034v27.042h-26.714v-27.042h-27.034z" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0393px"/>
+</g>
+</g>
+</svg>
