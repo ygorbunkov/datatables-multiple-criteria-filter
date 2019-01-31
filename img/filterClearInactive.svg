@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="38.054mm" height="40.982mm" version="1.1" viewBox="0 0 38.053898 40.982162" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<defs>
-<clipPath id="a">
-<path d="m0 0h145.67v156.33h-145.67z"/>
-</clipPath>
-</defs>
-<g transform="translate(-22.431 -143.32)">
-<g transform="matrix(.26458 0 0 .26458 10.553 148.58)">
-<path d="m44.895-19.898h132.54v24.962l-47.542 47.204v82.727l-37.617-37.443v-45.284l-47.382-47.204z" fill="#a7a7a7" fill-rule="evenodd"/>
-<path d="m130.05 16.425 19.209 19.202 19.049-19.202 18.889 18.882-19.049 19.042 19.049 19.202-18.889 18.882-19.049-19.202-19.209 19.202-18.889-18.882 19.209-19.202-19.209-19.042z" fill="#c00000" fill-rule="evenodd"/>
-<path transform="translate(44.414 -20.538)" d="m85.639 36.963 19.209 19.202 19.049-19.202 18.889 18.882-19.049 19.042 19.049 19.202-18.889 18.882-19.049-19.202-19.209 19.202-18.889-18.882 19.209-19.202-19.209-19.042z" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0414px"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="155" viewBox="0 0 38.054 40.982"><defs><clipPath id="A"><path d="M0 0h145.67v156.33H0z"/></clipPath></defs><g fill-rule="evenodd"><path d="M0-.005h35.067V6.6L22.49 19.09v21.888l-9.953-9.907V19.09L0 6.6z" fill="#a7a7a7"/><path d="M22.53 9.606l5.082 5.08 5.04-5.08 4.998 4.996-5.04 5.038 5.04 5.08-4.998 4.996-5.04-5.08-5.082 5.08-4.998-4.996 5.082-5.08-5.082-5.038z" fill="#c00000"/></g><path transform="matrix(.26458 0 0 .26458 -.126944 -.173944)" d="M85.64 36.963l19.21 19.202 19.05-19.202 18.89 18.882-19.05 19.042 19.05 19.202-18.89 18.882-19.05-19.202-19.21 19.202L66.75 94.09l19.21-19.202-19.21-19.042z" clip-path="url(#A)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="3.041"/></svg>
