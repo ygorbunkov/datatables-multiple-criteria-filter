@@ -34,7 +34,7 @@ $.fn.dataTable.ext.feature.push({
 					$('#filterInput').val() === '' ? $('.filterRow').show() : null;
 				};
 			//Global search variable
-			window.searchData = (Array(dataTable.columns().visible().count())).fill([]);
+			var searchData = (Array(dataTable.columns().visible().count())).fill([]);
 			//Filtering feature definition
 			function mFilter(dataTable){
 				//Append filter div to each column header and mark it with corresponding column index
