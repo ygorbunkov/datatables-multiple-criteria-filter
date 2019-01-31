@@ -8,7 +8,7 @@ Filter itself implemented as a DataTables feature plug-in, so in order to use th
   
 Search is implemented using external search plug-in, so filtering logic is different from standard, DataTables smart search feature is not in effect.
 
-To start using plug-in, you may simply refer to mFilter.js, mFilter.css within <head> section:
+To start using plug-in, you may simply refer to mFilter.js, mFilter.css within 'head' section:
 
 	  <head>
 	    <script src="js/mFilter.js"></script>
