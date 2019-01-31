@@ -10,9 +10,9 @@ Search is implemented using external search plug-in, so filtering logic is diffe
 
 To start using plug-in, you may simply refer to mFilter.js, mFilter.css within <head> section:
 
-  <head>
-    <script src="js/mFilter.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/mFilter.css">
-  </head>
-  
- Custom SVG-icons are loaded from /img directory.
+	  <head>
+	    <script src="js/mFilter.js"></script>
+	    <link rel="stylesheet" type="text/css" href="css/mFilter.css">
+	  </head>
+
+Custom SVG-icons are loaded from /img directory.
