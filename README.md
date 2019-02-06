@@ -1,12 +1,12 @@
-Multiple criteria filter for jQuery plug-in DataTables employs 'multiple-criteria-multiple-column' inclusive OR logic using DataTables API.
+jQuery DataTables plug-in employs 'multiple-criteria-multiple-column' filtering using DataTables API. Both (conventional) 'exclusive AND' and 'inclusive OR' (similar to SQL outer join) logic are implemented.
 
-Filter itself implemented as a DataTables feature plug-in, so in order to use that, you must specify 'F' among your DataTable 'dom'/'sDom' options:
+Filter itself coded as a DataTables feature plug-in, so in order to use that, you must specify 'F' among your DataTable 'dom'/'sDom' options:
 	
 	var dataTable = $('#mytable').DataTable({
 			sDom: 'tF'
 	});
   
-Search is implemented using external search plug-in, so filtering logic is different from standard, DataTables smart search feature is not in effect.
+Search is implemented using external search plug-in, so DataTables smart search feature is not in effect.
 
 To start using plug-in, you may simply refer to mFilter.js, mFilter.css within 'head' section:
 
@@ -15,4 +15,4 @@ To start using plug-in, you may simply refer to mFilter.js, mFilter.css within '
 	    <link rel="stylesheet" type="text/css" href="css/mFilter.css">
 	  </head>
 
-Custom SVG-icons are loaded from /img directory.
+Custom SVG-icons placed in /img directory also should be included for all interface elements rendered correctly.
