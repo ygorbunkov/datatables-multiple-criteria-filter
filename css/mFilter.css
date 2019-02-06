@@ -149,14 +149,46 @@
 
 #filterMenu .submitButton {
 	border: 1px solid #5a5a5a;
-	background: white;
-	box-shadow: none;
 	border-radius: 5px;
+	width: 45px;
+	height: 20px;
+	margin: 5px;
 }
 
-#filterMenu .submitButton:hover {
-	background: #5a5a5a;
-	color: white;
+#filterMenu .submitButton[match="1"] {
+	background: url("../img/innerJoin.svg") no-repeat center center;
+	background-size: 20px;
+	float: left;
+}
+
+#filterMenu .submitButton[match="1"]:hover {
+	background: url("../img/innerJoinHover.svg") no-repeat center center;
+	background-size: 20px;
+	background-color: #5a5a5a;
+}
+
+#filterMenu .submitButton[match="2"] {
+	background: url("../img/outerJoin.svg") no-repeat center center;
+	background-size: 20px;
+	float: left;
+}
+
+#filterMenu .submitButton[match="2"]:hover {
+	background: url("../img/outerJoinHover.svg") no-repeat center center;
+	background-size: 20px;
+	background-color: #5a5a5a;
+}
+
+#filterMenu .submitButton[action="cancel"] {
+	background: url("../img/cancel.svg") no-repeat center center;
+	background-size: 15px;
+	float: right;
+}
+
+#filterMenu .submitButton[action="cancel"]:hover {
+	background: url("../img/cancelHover.svg") no-repeat center center;
+	background-size: 15px;
+	background-color: #5a5a5a;
 }
 
 .noSelectionHighlight{
