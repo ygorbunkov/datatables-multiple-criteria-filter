@@ -1,4 +1,4 @@
-jQuery DataTables plug-in employs 'multiple-criteria-multiple-column' filtering using DataTables API. Both (conventional) 'exclusive AND' and 'inclusive OR' (similar to SQL outer join) logic are implemented.
+jQuery DataTables plug-in employs 'multiple-criteria-multiple-column' filtering using DataTables API. In addition to conventional 'match all the criteria' logic, 'append to selection' operation is available.
 
 Filter itself coded as a DataTables feature plug-in, so in order to use that, you must specify 'F' among your DataTable 'dom'/'sDom' options:
 	
