@@ -33,8 +33,17 @@ $.fn.dataTable.ext.feature.push({
 					$('.filterRow:visible').not(`:has([value*="${$('#filterInput').val().toLowerCase()}"])`).not('.persistent').hide();
 					$('#filterInput').val() === '' ? $('.filterRow').show() : null;
 				};
-			//Global search variable
-			var searchData = (Array(dataTable.columns().visible().count())).fill([]);
+			//Global search variable, each entry contains column index, match type (1-sharp, 2-soft), criteria list
+			var searchData = [...Array(dataTable.columns().visible().count())].map(entry => {return {match: null, column: null, criteria: []}});
+			//Prepare external filter
+			$.fn.DataTable.ext.search.push(function(settings, row){
+				return searchData.filter(entry => entry.match == 1).every(entry => 
+					entry.criteria.indexOf(row[entry.column]) > -1
+				) ||
+				searchData.filter(entry => entry.match == 2).some(entry => 
+					entry.criteria.indexOf(row[entry.column]) > -1
+				);
+			});
 			//Filtering feature definition
 			function mFilter(dataTable){
 				//Append filter div to each column header and mark it with corresponding column index
@@ -50,7 +59,7 @@ $.fn.dataTable.ext.feature.push({
 					//Prevent default behaviour on clicking onto parent element (column sorting)
 					event.stopPropagation();
 					//Clean previously opened filter menus
-					$('#filterMenu').remove();
+					$('#filterMenu').fadeOut(250).remove();
 					//Append filter menu div to the page body and place it considering distance to the right edge of the document
 					const menuX = $(window).width()-event.pageX > 220 ? event.pageX : event.pageX-220;
 					const menuY = event.pageY;
@@ -75,8 +84,9 @@ $.fn.dataTable.ext.feature.push({
 							</div>
 							<div id="scrollDown" class="scrollButton"></div>
 							<div id="submitButtons" class="noSelectionHighlight">
-								<button action="ok" class="submitButton">OK</button>
-								<button action="cancel" class="submitButton">Cancel</button>
+								<div action="apply" class="submitButton" match="1"></div>
+								<div action="apply" class="submitButton" match="2"></div>
+								<div action="cancel" class="submitButton"></div>
 							</div>
 						</div>
 						`);
@@ -93,7 +103,8 @@ $.fn.dataTable.ext.feature.push({
 					});
 					adjustFilterButtons();
 					//Show filter menu on the screen
-					$('#filterMenu').css('display', 'block');
+					//$('#filterMenu').css('display', 'block');
+					$('#filterMenu').fadeIn(150);
 					//Display scrollDown div if criteriaList contents height exceeds 250px
 					adjustScrollButtons();
 				})
@@ -103,7 +114,7 @@ $.fn.dataTable.ext.feature.push({
 				});
 				//Remove filter menu upon clicking elsewhere on the page
 				$(window).on('click', function (event) {
-						$(event.target).closest('#filterMenu').length == 0 ? $('#filterMenu').remove() : null;
+						$(event.target).closest('#filterMenu').length == 0 ? $('#filterMenu').fadeOut(150).remove() : null;
 				});
 				//Listen for check/uncheck event
 				$(document).on('click', '.filterRow', function(){
@@ -157,21 +168,20 @@ $.fn.dataTable.ext.feature.push({
 					//Close the menu, ignore changes if 'cancel' is clicked or all 
 					//category rows are checked and 'ok' button is clicked or checked
 					//categories stayed without changes since previous filtering
-					let criteriaChecked = [];
 					let columnIndex = $('#filterMenu').attr('colindex');
-					if($(event.target).is('[action="ok"]') && $('.filterRow:has([status="unchecked"],[status="semichecked"])').length > 0){
-						criteriaChecked = [...$('.filterRow:has([status="checked"]) .categoryLabel')].map(label=>$(label).text());
+					searchData[columnIndex].match = null;
+					searchData[columnIndex].criteria = [];
+					if($(event.target).is('[action="apply"]') && 
+					$('.filterRow').has('[status="unchecked"],[status="semichecked"]').length>0){
+						searchData[columnIndex].criteria = [...$('.filterRow:has([status="checked"]) .categoryLabel')].map(label=>$(label).text());
+						searchData[columnIndex].column = columnIndex; 
+						searchData[columnIndex].match = $(event.target).attr('match');
 					}
-					if(searchData[columnIndex] != criteriaChecked){
-						searchData.splice(columnIndex, 1, criteriaChecked);
-						$.fn.DataTable.ext.search = [];
-						if(searchData.some(item => item.length > 0)){
-							$.fn.DataTable.ext.search.push((settings, row) => row.some((cell,colNum) => searchData[colNum].indexOf(cell) > -1));
-						}
-						dataTable.draw();
-						searchData.forEach((item, index) => item.length > 0 ? $(`.columnFilter[colindex="${index}"]`).attr('status', 'active') : $(`.columnFilter[colindex="${index}"]`).attr('status', 'inactive') );
-					}
-					$('#filterMenu').remove();	
+					$.each($('.columnFilter'), function() {
+						searchData[$(this).attr('colindex')].criteria.length > 0 ? $(this).attr('status','active') : $(this).attr('status','inactive');
+					});
+					dataTable.draw();
+					$('#filterMenu').fadeOut(150).remove();	
 				});
 			};
 		});
