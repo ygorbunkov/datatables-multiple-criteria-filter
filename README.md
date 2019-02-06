@@ -15,4 +15,4 @@ To start using plug-in, you may simply refer to mFilter.js, mFilter.css within '
 	    <link rel="stylesheet" type="text/css" href="css/mFilter.css">
 	  </head>
 
-Custom SVG-icons placed in /img directory also should be included for all interface elements rendered correctly.
+Custom SVG-icons placed in /img directory also should be included for all interface elements rendered properly.
