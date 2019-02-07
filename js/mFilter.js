@@ -33,7 +33,6 @@ $.fn.dataTable.ext.feature.push({
 					$('.filterRow:visible').not(`:has([value*="${$('#filterInput').val().toLowerCase()}"])`).not('.persistent').hide();
 					$('#filterInput').val() === '' ? $('.filterRow').show() : null;
 				};
-
 			//Filtering feature definition
 			function mFilter(dataTable){
 				//Global search variable, each entry contains column index, match type (1-sharp, 2-soft), criteria list
