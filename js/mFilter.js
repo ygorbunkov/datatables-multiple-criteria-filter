@@ -33,19 +33,20 @@ $.fn.dataTable.ext.feature.push({
 					$('.filterRow:visible').not(`:has([value*="${$('#filterInput').val().toLowerCase()}"])`).not('.persistent').hide();
 					$('#filterInput').val() === '' ? $('.filterRow').show() : null;
 				};
-			//Global search variable, each entry contains column index, match type (1-sharp, 2-soft), criteria list
-			var searchData = [...Array(dataTable.columns().visible().count())].map(entry => {return {match: null, column: null, criteria: []}});
-			//Prepare external filter
-			$.fn.DataTable.ext.search.push(function(settings, row){
-				return searchData.filter(entry => entry.match == 1).every(entry => 
-					entry.criteria.indexOf(row[entry.column]) > -1
-				) ||
-				searchData.filter(entry => entry.match == 2).some(entry => 
-					entry.criteria.indexOf(row[entry.column]) > -1
-				);
-			});
+
 			//Filtering feature definition
 			function mFilter(dataTable){
+				//Global search variable, each entry contains column index, match type (1-sharp, 2-soft), criteria list
+				var searchData = [...Array(dataTable.columns().visible().count())].map(entry => {return {match: null, column: null, criteria: []}});
+				//Prepare external filter
+				$.fn.DataTable.ext.search.push(function(settings, row){
+					return searchData.filter(entry => entry.match == 1).every(entry => 
+						entry.criteria.indexOf(row[entry.column]) > -1
+					) ||
+					searchData.filter(entry => entry.match == 2).some(entry => 
+						entry.criteria.indexOf(row[entry.column]) > -1
+					);
+				});
 				//Append filter div to each column header and mark it with corresponding column index
 				dataTable.columns().every(function () {
 					const headerElement = this.header();
