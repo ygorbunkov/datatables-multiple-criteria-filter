@@ -97,7 +97,7 @@ $.fn.dataTable.ext.feature.push({
 						$('#criteriaList').append(`
 							<div class="filterRow">
 								<div class="categoryLabel noSelectionHighlight">${value}</div>
-								<div type="checkbox" status="${checkStatus}" value="${value.toLowerCase()}"></div>
+								<div type="checkbox" status="${checkStatus}" value="${String(value).toLowerCase()}"></div>
 							</div>
 						`);
 					});
