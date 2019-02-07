@@ -157,37 +157,37 @@
 
 #filterMenu .submitButton[match="1"] {
 	background: url("../img/innerJoin.svg") no-repeat center center;
-	background-size: 20px;
+	background-size: 16px;
 	float: left;
 }
 
 #filterMenu .submitButton[match="1"]:hover {
 	background: url("../img/innerJoinHover.svg") no-repeat center center;
-	background-size: 20px;
+	background-size: 16px;
 	background-color: #5a5a5a;
 }
 
 #filterMenu .submitButton[match="2"] {
 	background: url("../img/outerJoin.svg") no-repeat center center;
-	background-size: 20px;
+	background-size: 16px;
 	float: left;
 }
 
 #filterMenu .submitButton[match="2"]:hover {
 	background: url("../img/outerJoinHover.svg") no-repeat center center;
-	background-size: 20px;
+	background-size: 16px;
 	background-color: #5a5a5a;
 }
 
 #filterMenu .submitButton[action="cancel"] {
 	background: url("../img/cancel.svg") no-repeat center center;
-	background-size: 15px;
+	background-size: 14px;
 	float: right;
 }
 
 #filterMenu .submitButton[action="cancel"]:hover {
 	background: url("../img/cancelHover.svg") no-repeat center center;
-	background-size: 15px;
+	background-size: 14px;
 	background-color: #5a5a5a;
 }
 
