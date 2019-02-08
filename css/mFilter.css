@@ -22,6 +22,7 @@
 	padding: 5px;
 	border-radius: 5px;
 	color: #5a5a5a;
+	overflow: hidden;
 }
 
 #filterMenu .searchRow {
@@ -90,6 +91,7 @@
 
 #filterMenu #criteriaList {
 	overflow-y: scroll;
+	scrollbar-width: none;
 	max-height: 250px;
 	margin: 5px;
 }
