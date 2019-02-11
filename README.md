@@ -15,4 +15,6 @@ To start using plug-in, you may simply refer to mFilter.js, mFilter.css within '
 	    <link rel="stylesheet" type="text/css" href="css/mFilter.css">
 	  </head>
 
-Custom SVG-icons placed in /img directory also should be included for all interface elements rendered properly.
+To include mFilter remotely:
+	<script type="application/javascript" src="https://cdn.mfilter.cf/js/mfilter.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.mfilter.cf/css/mfilter.min.css">
