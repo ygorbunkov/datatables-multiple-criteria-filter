@@ -106,9 +106,9 @@ $.fn.dataTable.ext.feature.push({
 							</div>
 							<div id="scrollDown" class="scrollButton"></div>
 							<div id="submitButtons" class="noSelectionHighlight">
-								<div action="apply" class="submitButton" match="1"></div>
-								<div action="apply" class="submitButton" match="2"></div>
-								<div action="cancel" class="submitButton"></div>
+								<div action="apply" class="submitButton" match="1">Filter</div>
+								<div action="apply" class="submitButton" match="2">Append</div>
+								<div action="cancel" class="submitButton">Cancel</div>
 							</div>
 						</div>
 						`);
