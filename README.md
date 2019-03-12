@@ -21,6 +21,6 @@ To include mFilter remotely:
 	  <link rel="stylesheet" type="text/css" href="https://cdn.mfilter.tk/css/mfilter.min.css">
 	  
 Prerequisites:
-
+	  <script type="application/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	  <script type="application/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
