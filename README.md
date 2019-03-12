@@ -17,8 +17,8 @@ To start using plug-in, you may simply refer to mFilter.js, mFilter.css within '
 
 To include mFilter remotely:
 
-	  <script type="application/javascript" src="https://cdn.mfilter.cf/js/mfilter.min.js"></script>
-	  <link rel="stylesheet" type="text/css" href="https://cdn.mfilter.cf/css/mfilter.min.css">
+	  <script type="application/javascript" src="https://cdn.mfilter.tk/js/mfilter.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="https://cdn.mfilter.tk/css/mfilter.min.css">
 	  
 Prerequisites:
 
