@@ -13,6 +13,8 @@ var dataTable = $('#mytable').DataTable({
 
 Search is implemented using external search plug-in, so DataTables smart search feature is not in effect.
 
+Since the filtering is done client side, plug-in is not capable to filter DataTables operating in server-side processing mode (`serverSide: true` option).
+
 To start using plug-in, you may simply refer to mFilter.js, mFilter.css within 'head' section:
 
 ```HTML
