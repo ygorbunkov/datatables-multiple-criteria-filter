@@ -31,6 +31,8 @@ To include mFilter remotely:
 <link rel="stylesheet" type="text/css" href="https://cdn.mfilter.tk/css/mfilter.min.css">
 ```
 
+Live demo is available at [Codepen](https://codepen.io/ygorbunkov/pen/drqEyY?editors=1010)
+
 # Prerequisites
 
 ```HTML
