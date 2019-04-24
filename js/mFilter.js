@@ -115,6 +115,17 @@ $.fn.dataTable.ext.feature.push({
 					//Extract unique and sorted column cells values
 					const category = dataTable.column(columnIndex).data().sort().unique();
 					$.each(category, function(index, value){
+                                            if (value.indexOf("href") >= 0){
+                                            var start_pos = value.indexOf('>') + 1;
+                                            var end_pos = value.indexOf('</',start_pos);
+                                                value = value.substring(start_pos,end_pos).trim();
+                                            }
+                                            else if(value.indexOf("img src") >= 0){
+                                            var start_pos = value.indexOf('<img') + 1;
+                                            var end_pos = value.indexOf('>',start_pos);
+                                                value = value.substring(start_pos,end_pos)
+
+                                            }
 						const checkStatus = categoryVisible.indexOf(value) == -1 ? 'unchecked' : categoryInvisible.indexOf(value) == -1 ? 'checked' : 'semichecked';
 						$('#criteriaList').append(`
 							<div class="filterRow">
