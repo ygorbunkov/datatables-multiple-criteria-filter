@@ -1,5 +1,5 @@
 //Global mfilter data
-window.mfilterGlobal = new Array();
+var mfilterGlobal = new Array();
 //Global functions
 	//Display filter menu
 	const displayFilterMenu = event => {
